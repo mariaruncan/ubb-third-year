@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	// MLP nu contine operatorul -- si id-ul are maxim 8 caractere 
+	int n, number12345678, sum;
+	cin >> n;
+	sum = 0;
+	while (n > 0) {
+		cin >> number12345678;
+		sum = sum + number12345678;
+		n--;
+	}
+	cout << sum;
+}

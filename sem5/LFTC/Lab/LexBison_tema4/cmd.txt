@@ -1,0 +1,4 @@
+bison -d bison.y
+flex flex.lxi
+gcc bison.tab.c lex.yy.c
+./a in.txt

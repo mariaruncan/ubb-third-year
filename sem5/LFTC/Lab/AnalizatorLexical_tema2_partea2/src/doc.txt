@@ -1,0 +1,2 @@
+https://en.cppreference.com/w/cpp/language/integer_literal
+https://en.cppreference.com/w/cpp/language/floating_literal

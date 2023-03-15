@@ -1,0 +1,16 @@
+Fisier = Q Sigma S F [ListaTanzitii]
+Q = "Q" ListaStari
+ListaStari = Stare [ListaStari]
+Stare = "q"Numar
+Numar = Cifra | CifraNenula ListaCifre
+Cifra = "0" | ... | "9"
+CifraNenula = "1" | ... | "9"
+ListaCifre = Cifra [ListaCifre]
+ListaStari = Stare [ListaStari]
+Sigma = "SIGMA" ListaSimboluri
+ListaSimboluri = Simbol [ListaSimboluri]
+Simbol = "a" | ... | "z" | "A" | ... | "Z" | Cifra
+S = "S" Stare
+F = "F" ListaStari
+ListaTanzitii = Tranzitie [ListaTranzitii]
+Tranzitie = Stare ListaSimboluri Stare

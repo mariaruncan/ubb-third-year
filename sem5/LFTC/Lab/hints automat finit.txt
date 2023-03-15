@@ -1,0 +1,2 @@
+Stocare tranzitii
+Dictionar<Key, Value> unde Key este o stare, Value este Tuple<a, stare>, unde a este din Sigma

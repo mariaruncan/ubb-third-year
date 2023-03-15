@@ -1,0 +1,7 @@
+*.zip
+*.rar
+*.mp4
+*.mkv
+venv
+
+.vs

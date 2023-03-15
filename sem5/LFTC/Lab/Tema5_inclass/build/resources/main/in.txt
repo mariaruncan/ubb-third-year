@@ -1,0 +1,4 @@
+A bac B C
+A B C A
+B b B
+C semicolon

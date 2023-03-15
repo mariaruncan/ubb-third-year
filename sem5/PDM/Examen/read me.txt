@@ -1,0 +1,2 @@
+in ex2-parking, in readme e cerinta
+rezolvarea e de 10, dar are niste chestii in plus fata de curs - hilt framework pt dependency injection

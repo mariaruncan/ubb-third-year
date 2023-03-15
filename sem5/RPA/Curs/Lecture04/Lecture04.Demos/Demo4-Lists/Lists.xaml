@@ -1,0 +1,173 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="582.8,1351.2" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="322,1286" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="scg:List(x:String)" Name="weekDaysList">
+        <Variable.Default>
+          <mva:VisualBasicValue x:TypeArguments="scg:List(x:String)" ExpressionText="new List(of String) from {&quot;Monday&quot;, &quot;Tuesday&quot;, &quot;Wednesday&quot;}" />
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="scg:List(x:String)" Name="aList" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence sap2010:Annotation.AnnotationText="initialized list&#xA;empty list&#xA;use String. Join to print the list content" DisplayName="Sequence-List Example 1" sap:VirtualizedContainerService.HintSize="280,68.8" sap2010:WorkflowViewState.IdRef="Sequence_8">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="scg:List(x:Int32)" Default="[new List(of Int32) from {1,2,3}]" Name="newList" />
+        <Variable x:TypeArguments="scg:List(x:Boolean)" Name="nList" />
+      </Sequence.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="262.4,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_13" Text="1st example:" />
+      <Assign sap:VirtualizedContainerService.HintSize="262.4,59.6" sap2010:WorkflowViewState.IdRef="Assign_4">
+        <Assign.To>
+          <OutArgument x:TypeArguments="scg:List(x:String)">[weekDaysList]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="scg:List(x:String)">[new List(of String)from{"Monday", "Tuesday"}]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign sap:VirtualizedContainerService.HintSize="262.4,59.6" sap2010:WorkflowViewState.IdRef="Assign_5">
+        <Assign.To>
+          <OutArgument x:TypeArguments="scg:List(x:String)">[aList]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="scg:List(x:String)">[new List(of String)]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="262.4,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_4" Text="[String.Join(&quot; &quot;,weekDaysList)+vbCrLf+&quot;Count: &quot;+weekDaysList.Count.ToString]" />
+    </Sequence>
+    <Sequence DisplayName="Sequence-List Example 2" sap:VirtualizedContainerService.HintSize="280,68.8" sap2010:WorkflowViewState.IdRef="Sequence_11">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="x:String" Default="monkey" Name="item" />
+      </Sequence.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="262.4,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_14" Text="2nd example:" />
+      <Assign sap:VirtualizedContainerService.HintSize="262.4,59.6" sap2010:WorkflowViewState.IdRef="Assign_8">
+        <Assign.To>
+          <OutArgument x:TypeArguments="scg:List(x:String)">[aList]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="scg:List(x:String)">[new List(of String) from{"cat", "dog"}]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="262.4,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_10" Text="[String.Join(&quot; &quot;,aList)]" />
+      <Assign sap:VirtualizedContainerService.HintSize="262.4,59.6" sap2010:WorkflowViewState.IdRef="Assign_7">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[aList(0)]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">fish</InArgument>
+        </Assign.Value>
+      </Assign>
+      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="262.4,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_11" Text="[String.Join(&quot; &quot;,aList)]" />
+      <InvokeMethod DisplayName="Invoke Method" sap:VirtualizedContainerService.HintSize="262.4,135.2" sap2010:WorkflowViewState.IdRef="InvokeMethod_6" MethodName="Add">
+        <InvokeMethod.TargetObject>
+          <InArgument x:TypeArguments="scg:List(x:String)">[aList]</InArgument>
+        </InvokeMethod.TargetObject>
+        <InArgument x:TypeArguments="x:String">[item]</InArgument>
+      </InvokeMethod>
+      <AddToCollection x:TypeArguments="x:String" Collection="[aList]" DisplayName="Add To Collection" sap:VirtualizedContainerService.HintSize="262.4,22" sap2010:WorkflowViewState.IdRef="AddToCollection`1_3" Item="[item]" />
+      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="262.4,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_12" Text="[String.Join(&quot; &quot;,aList)]" />
+    </Sequence>
+    <Sequence sap2010:Annotation.AnnotationText="- use of Invoke Method activity to insert/remove values from lists;&#xA;&#xA;- use of Collection-based activities - Add To Collection&#xA;" DisplayName="Sequence-List Example 3" sap:VirtualizedContainerService.HintSize="280,976.4" sap2010:WorkflowViewState.IdRef="Sequence_9">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="x:String" Default="Thursday" Name="value" />
+      </Sequence.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="238,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_15" Text="3rd example:" />
+      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="238,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_16" Text="[String.Join(&quot; &quot;,weekDaysList)]" />
+      <AddToCollection x:TypeArguments="x:String" Collection="[weekDaysList]" DisplayName="Add To Collection" sap:VirtualizedContainerService.HintSize="238,22" sap2010:WorkflowViewState.IdRef="AddToCollection`1_1" Item="[value]" />
+      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="238,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_9" Text="[String.Join(&quot; &quot;,weekDaysList)]" />
+      <InvokeMethod DisplayName="Invoke Method" sap:VirtualizedContainerService.HintSize="238,135.2" sap2010:WorkflowViewState.IdRef="InvokeMethod_5" MethodName="Insert">
+        <InvokeMethod.TargetObject>
+          <InArgument x:TypeArguments="scg:List(x:String)">[weekDaysList]</InArgument>
+        </InvokeMethod.TargetObject>
+        <InArgument x:TypeArguments="x:Int32">2</InArgument>
+        <InArgument x:TypeArguments="x:String">Wednesday</InArgument>
+      </InvokeMethod>
+      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="238,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_7" Text="[String.Join(&quot; &quot;,weekDaysList)]" />
+      <InvokeMethod DisplayName="Invoke Method" sap:VirtualizedContainerService.HintSize="238,135.2" sap2010:WorkflowViewState.IdRef="InvokeMethod_4" MethodName="Remove">
+        <InvokeMethod.TargetObject>
+          <InArgument x:TypeArguments="scg:List(x:String)">[weekDaysList]</InArgument>
+        </InvokeMethod.TargetObject>
+        <InArgument x:TypeArguments="x:String">Monday</InArgument>
+      </InvokeMethod>
+      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="238,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_6" Text="[String.Join(&quot; &quot;,weekDaysList)]" />
+    </Sequence>
+  </Sequence>
+</Activity>

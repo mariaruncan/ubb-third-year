@@ -1,0 +1,15 @@
+Q q0 q1 q2 q3 q4 q5 q6 q7
+SIGMA 0 1 2 3 4 5 6 7 8 9 a b c d e f A B C D E F x X
+S q0
+F q1 q2 q3 q5 q7
+q0 123456789 q1
+q1 0123456789 q1
+q0 0 q2
+q2 01234567 q3
+q3 01234567 q3
+q2 xX q4
+q4 0123456789abcdefABCDEF q5
+q5 0123456789abcdefABCDEF q5
+q2 bB q6
+q6 01 q7
+q7 01 q7

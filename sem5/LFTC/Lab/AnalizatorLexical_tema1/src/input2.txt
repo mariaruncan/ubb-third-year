@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+int main () {
+	int first, second;
+	cin >> first;
+	cin >> second;
+	while (first != second) {
+		if (first > second) {
+			first = first - second;
+		}
+		else {
+			second = second - first;
+		}
+	}
+	cout << first;
+}

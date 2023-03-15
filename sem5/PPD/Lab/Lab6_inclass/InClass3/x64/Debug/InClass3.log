@@ -1,0 +1,4 @@
+﻿  InClass3.cpp
+D:\University\Semestrul 5\PPD\Lab\InClass3\InClass3\InClass3.cpp(103,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+D:\University\Semestrul 5\PPD\Lab\InClass3\InClass3\InClass3.cpp(99,16): warning C4101: 'status': unreferenced local variable
+  InClass3.vcxproj -> D:\University\Semestrul 5\PPD\Lab\InClass3\x64\Debug\InClass3.exe

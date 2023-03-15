@@ -1,0 +1,172 @@
+I) 1) un monitor e un obiect care poate bloca un thread care il acesseaza, aceasta blocare este valabila pana un alt thread acceseaza acest obiect si il deblocheaza explicit. In java orice obiect e un monitor
+
+ex 
+
+public class Main() {
+  public int i = 0;
+  public static void main(String[] args) {
+  	Main a = new Main();
+        Thread t1 = new Thread(()->{ a.x(); });
+        Thread t2 = new Thread(()->{ a.x(); });
+	Thread t3 = new Thread(()->{ a.x(); });
+        t1.start();
+	t2.start();
+	t3.start();
+  	t1.join();
+	t2.join();
+	t3.join();
+   }
+   
+   void x() {
+   	syncronize {
+        	i++;
+	}
+	if (i==2)
+	   notifyAll();
+        else {
+		try {
+			syncronize {
+				wait();
+			}
+		} catch (Exception ignored) {}
+        }
+   }
+}
+
+primele 2 threaduri care reusesc sa obtina syncronize vor putea sa creasca i cu unu si intre in asteptare pana ce al 3-lea thread le va da notify..
+2) buna gluma
+3) granularitatea este nivelul la care se face sincronizarea intrun program paralel ex un program care insereaza elemente intrun hash map syncronizarea se poate face la nivelul intregului hashmap la fiecare lista a unui anume hash sau chiar la fiecare element din fiecare lista de la un hash. Granulariatea la aplicatiile cu paralelizare triviala este mare deoarece nu este nevoie de syncronizare de loc.
+
+II) 1) se imparte problema in 2 probleme mai mici si se rezolva recursiv pana ce problemele sunt triviale dupa care se aduna rezultate in ordinea inversa in care au fost aduse. Pentru un singur thread aceste probleme au de obicei O(n) dar considerand existenta a n nuclee de procesare atunci problema ajunge la O(log2(n))
+
+2) deadlock apare cand un thread asteapta dupa resuresele ocupate de un al doilea thread si acesta din urma asteapta dupa resursele ocupate de primul cea ce le forteza sa astepte la infinit astfel oprind executia.
+
+Object a = new Object(), b = new Object();
+Thread t1 = new Thread(()->{
+	syncronize(a) {
+		Thread.sleep(1000)
+		syncronize(b) {
+		
+		}	
+	}
+		
+});
+
+Thread t2 = new Thread(()->{
+	syncronize(b) {
+		Thread.sleep(1000)
+		syncronize(a) {
+		
+		}	
+	}
+		
+});
+
+t1.start();
+t2.start();
+t1.join();
+t2.jon();
+
+MPI : programul 1 trimite ceva la programul 2 si astepata ca acesta sa primeasca acel ceva
+programul 2 trimite ceva la programul 1 si astepata ca acesta sa primeasca acel ceva
+astfel nici unul din programe nu ajunge la callul functiei recv
+
+ if (rank == 0) {
+      MPI_Send(..., 1, tag, MPI_COMM_WORLD);
+      MPI_Recv(..., 1, tag, MPI_COMM_WORLD, &status);
+ } else if (rank == 1) {
+      MPI_Send(..., 0, tag, MPI_COMM_WORLD);
+      MPI_Recv(..., 0, tag, MPI_COMM_WORLD, &status);
+ }
+
+3) wait() opreste threadul care o apeleaza pe monitorul(Obiectul de pe care este apelata)
+   notify() notifica (porneste) un thread ce asteapta pe monitorul(Obiectul de pe care este apelata) (nu este specificat care thread...)
+   notifyAll() notifica (porneste) toate threadurile ce asteapta pe monitorul(Obiectul de pe care este apelata)
+
+public class Main() {
+  public int i = 0;
+  public static void main(String[] args) {
+  	Main a = new Main();
+        Thread t1 = new Thread(()->{ a.x(); });
+        Thread t2 = new Thread(()->{ a.x(); });
+	Thread t3 = new Thread(()->{ a.x(); });
+        t1.start();
+	t2.start();
+	t3.start();
+  	t1.join();
+	t2.join();
+	t3.join();
+   }
+   
+   void x() {
+   	syncronize {
+        	i++;
+	}
+	if (i==2)
+	   notifyAll();  // daca aici ar di notify doar un thread ar porni deci al doilea ar astepta si mai ar astepta dupa el => deadlock
+        else {
+		try {
+			syncronize {
+				wait();
+			}
+		} catch (Exception ignored) {}
+        }
+   }
+}
+
+primele 2 threaduri care reusesc sa obtina syncronize vor putea sa creasca i cu unu si intre in asteptare pana ce al 3-lea thread le va da notify..
+
+III) 1) semaforul este asemator unui lock el va lasa ca un thread sa foloseasca resursele protejate de acesta cu conditia ca resursele sa nu fie deja ocupate de alt/alte threaduri caz in care va pune threadul in asteptare pana la momentul in care un thread va elibera resursele.
+
+Semaphore sem = new Semaphore(3);
+
+sem.aquire() va cere semaforului access la resurse si sem.release() va elibera resursele semaforul din exeplu va da access la resurse la maxim 3 threaduri in acelasi timp pentru ca un al patrulea thread sa treaca de apelul functiei sem.aquire sem.release va trebui sa fie apelata din unul din cele 3 threaduri.
+
+2) IARA AI GLUME IN PROGRAM
+
+3) ...
+
+IV) 1) Syncronizarea printro variabila conditionala functioneaza astfel orice thread care are nevoie de o resursa oferita de alt thread va verifica daca resursa a fost oferita daca nu va intra in asteptare pana cand va fi notificat moment in care va face iar verificarea.
+
+ex:
+
+public class Main() {
+  public int i = 0;
+  public int sum = 0;
+  public static void main(String[] args) {
+  	Main a = new Main();
+        Thread t1 = new Thread(()->{ a.x(1); });
+        Thread t2 = new Thread(()->{ a.x(2); });
+	Thread t3 = new Thread(()->{ a.x(3); });
+        t1.start();
+	t2.start();
+	t3.start();
+  	t1.join();
+	t2.join();
+	t3.join();
+   }
+   
+      void x() {
+   	syncronize {
+		sum = sum + n;
+        	i++;
+	}
+	if (i==2)
+	   notifyAll();  
+        else {
+		try {
+			syncronize {
+				wait();
+			}
+		} catch (Exception ignored) {}
+        }
+	System.out.println("Suma: " + sum)
+   }
+}
+
+programul va scrie Suma = 6, Suma= 6, Suma =6 deoarece primele 2 threaduri care reusesc sa intre in blocul de syncronize vor creste suma si incrementa i dar doar al 3-lea va seta i=3 si ii va notifica pe primele 2 sa porneasca executia deci cand se executa afisare este garanta ca sum va avea valuarea 6 in toate thredurile.
+
+2) nam ideee
+3) am idee da nu vreau sa scriu prostii
+
+VI) nam inteles decat cerinta decat la 2 care nu o stiu face :( daca iti pica 6 dai in toamna licenta ... :|

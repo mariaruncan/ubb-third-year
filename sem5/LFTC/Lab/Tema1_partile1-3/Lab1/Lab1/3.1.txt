@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	// id starts with a digit
+	float 1radius, area, perimeter, pi;
+	pi = 3.14;
+	cin >> 1radius;
+	perimeter = 2 * pi * 1radius;
+	area = pi * 1radius * 1radius;
+	cout << perimeter;
+	cout << area;
+}

@@ -1,0 +1,3 @@
+﻿  InClass3.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(702,5): error MSB6006: "CL.exe" exited with code 2.
+D:\University\Semestrul 5\PPD\Lab\InClass3\InClass3\InClass3.cpp(2,10): fatal  error C1083: Cannot open include file: 'mpi.h': No such file or directory

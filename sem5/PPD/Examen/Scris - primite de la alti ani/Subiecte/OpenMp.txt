@@ -1,0 +1,107 @@
+6. Liniile S18-S20:
+   numarthreaduri = 7
+   n = 1000
+   a = [1,1...1] x 1000
+   b = [0,0...0] x 1000
+   c = [0,0...0] x 1000
+   d = [1^2, 2^2... 1000^2]
+   S21 e call functie
+   S6 porneste pornesc 6 threaduri (cu main 7)
+   S8 imparte intervalul 1..n (1000) la 5 intervale si primele 5 threaduri primesc aceste intervale
+   S9-10 b = [1,1...1] x 1000
+   S12 imparte intervalul 0..n (1000) la 5 intervale si le da la primele 5 threaduri deoarece la S8 este nowait cele 2 threaduri ramase la de S8 vor primi intervale la S12 dupa care se vor asigna intervalele in ordine circulara la threadurile care termina primul for (1 interval 3, 2 interval 4, 3 intervalul 5)
+  S13-14 y(c) = [1,2,3,4,5...1000]
+la linia S15 se syncronizeaza si opresc threadurile (cu exceptia main)
+a = [1...1]
+b = [1...1]
+c = [1,2...1000]
+d = [1^2,2^2...1000^2]
+rezultatul programului 0
+
+3. Liniile S19-S21:
+   numarthreaduri = 5
+   n = 1000
+   a = [1,1...1] x 1000
+   b = [1,0,0...0] x 1000
+   c = [0,0...0] x 1000
+   d = [0,0...0] x 1000
+   S22 e call functie
+   S6 pornesc 4 threaduri (cu main 5)
+   S8 imparte intervalul 1..n (1000) la 4 intervale si primele 4 threaduri primesc aceste intervale
+   S9-10 b = [1,1...1] x 1000 si se asteapta dupa toate threadurile sa termine aceasta setare
+   S12 imparte intervalul 0..n (1000) la 5 intervale si le da la cele 5 threaduri
+  S13-14 y(c) = [0,0,0...1,1,1...2,2,2...3,3,3...4,4,4...4] de 200x fiecare
+la linia S15 se syncronizeaza si opresc threadurile (cu exceptia main)
+a = [1...1]
+b = [1...1]
+c = [0,0,0...1,1,1...2,2,2...3,3,3...4,4,4...4]
+rezultatul programului 0
+
+2. Liniile S16-S18:
+   numarthreaduri = 5
+   n = 1001
+   a = [1,1...1] x 1001
+   S19 e call functie
+   S6 pornesc 4 threaduri (cu main 5)
+   S9 imparte intervalul 1..n (1001) la 10 intervale si cele 5 threaduri primesc aceste intervale in ordine circulara (1 primeste 1,6, 2 primeste 2,7 .. 5 primeste 5,10) 
+   S10-11 y(a) = [1,0,0..1,1..2,2..3,3..4,4..0,0..1,1..2,2..3,3..4,4] de x 100 ori fiecare si se asteapta dupa toate threadurile sa termine aceasta setare
+   S12 y(a)[0] va fi incrementat de toate threadurile (de 5 ori) adica va avea valoarea 6
+  S13 se syncronizeaza si opresc threadurile (cu exceptia main)
+a = [6,0,0..1,1..2,2..3,3..4,4..0,0..1,1..2,2..3,3..4,4] de x 100 ori fiecare
+rezultatul programului 0
+
+5. Liniile S28-S29:
+   numarthreaduri = 5
+   array = [0,0,0...0] x 10000
+   S31 e call functie
+   S15 pornesc 4 threaduri (cu main 5) si fiecare are o vaiabila ia nt si separat
+   S17 ia pt thread 1 e 0 pt thread 2 este 1 .. pt thread 5 e 4
+   S18 nt e pentru toate 5
+   S12 imparte intervalul 0..n(10000) la 2 intervale si threadul 1 primeste primu interval threadul 2 al doilea
+   S13-14 y(array) = [5,105,205...499905,500002,500102...999902] 
+   S10-11 y(a) = [1,0,0..1,1..2,2..3,3..4,4..0,0..1,1..2,2..3,3..4,4] de x 
+   S15 y(a)[0] va fi incrementat de toate threadurile (de 5 ori) adica va avea valoarea 10
+  S24 se syncronizeaza si opresc threadurile (cu exceptia main)
+array = [10,105,205...499905,500002,500102...999902]
+rezultatul programului 0
+
+1. Liniile S29-S30:
+   numarthreaduri = 9
+   tablou = [0,0,0...0] x 1000
+   S31 e call functie
+   S14 val = 0
+   S15 pornesc 8 threaduri (cu main 9) si fiecare are o vaiabila i,p,size si istart separate
+   S17 i pt thread 1 e 0 pt thread 2 este 1 .. pt thread 9 e 8
+   S18 p e pentru toate 9
+   S19 size e pt toate 111
+   S20 istart e pt thread 1 0 pt thread 2 111 pt threa 3 222 pt thread 9 888
+   S21-22
+   pt thread 9 (unde i == p-1) size e 112
+   S23 apel al functiei multiplicare
+   S3-9 x = [0,0,0,...1110,1110...2220,2220...8880,8880..8880] (0 de 111 ori 1110 de 111 ... 2220 de 111 ... 8880 de 112 ori)
+   S24 val este incrementat cu 10 de fiecare thread adica va avea caloare 90 
+   S25 se syncronizeaza si opresc threadurile (cu exceptia main)  
+   tablou = [0,0,0,...1110,1110...2220,2220...8880,8880..8880] (0 de 111 ori 1110 de 111 ... 2220 de 111 ... 8880 de 112 ori)
+   v = 90
+rezultatul programului 0
+
+4. Liniile S23-S25:
+   numarthreaduri = 3
+   n = 1000
+   a = [1^2, 2^2... 1000^2]
+   b = [0,0...0] x 1000
+   c = [0,0...0] x 1000
+   d = [0,0...0]
+   S26 e call functie
+   S5 porneste pornesc 2 threaduri (cu main 3)
+   S7 specifica niste sectiuni (fiecare sectiune va fi asignata unui thread)
+   S9-11 threadul 1 b = [1^2,2^2...1000^2]
+   S12-14 threadul 2 y(c) = [1,2,3,4,...1000]
+   S15-17 threadul 3 z(d) = [2*1^2, 2*2^2, ... 2*1000^2] 
+la linia S19 se syncronizeaza si opresc threadurile (cu exceptia main)
+S20 n devine 1001
+a = [1^2, 2^2... 1000^2]
+b = [1^2, 2^2... 1000^2]
+c = [1,2...1000]
+d = [2*1^2, 2*2^2, ... 2*1000^2] 
+rezultatul programului 0

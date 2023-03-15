@@ -1,0 +1,32 @@
+{
+  "version": 2,
+  "dgSpecHash": "uCyzNrOaq0zX4ERqgWT4bVEeQjIKJvYcNEnW4l3VSdBjvnTg6dNd1io1JyUNCvY4jIZSOn0SkWp+WnW3W/Ytbg==",
+  "success": true,
+  "projectFilePath": "E:\\RPA\\2022-2023\\Lectures\\Lecture04\\Lecture04.Demos\\Demo10-OtherControlFlow\\.local\\",
+  "expectedPackageFiles": [
+    "C:\\Users\\Dumitru\\.nuget\\packages\\avalonedit\\5.0.3\\avalonedit.5.0.3.nupkg.sha512",
+    "C:\\Users\\Dumitru\\.nuget\\packages\\bouncycastle\\1.8.5\\bouncycastle.1.8.5.nupkg.sha512",
+    "C:\\Users\\Dumitru\\.nuget\\packages\\closedxml\\0.87.1\\closedxml.0.87.1.nupkg.sha512",
+    "C:\\Users\\Dumitru\\.nuget\\packages\\csvhelper\\2.13.5\\csvhelper.2.13.5.nupkg.sha512",
+    "C:\\Users\\Dumitru\\.nuget\\packages\\documentformat.openxml\\2.5.0\\documentformat.openxml.2.5.0.nupkg.sha512",
+    "C:\\Users\\Dumitru\\.nuget\\packages\\extended.wpf.toolkit\\2.8.0\\extended.wpf.toolkit.2.8.0.nupkg.sha512",
+    "C:\\Users\\Dumitru\\.nuget\\packages\\humanizer.core\\2.4.2\\humanizer.core.2.4.2.nupkg.sha512",
+    "C:\\Users\\Dumitru\\.nuget\\packages\\interop.domino.dll\\1.0.0\\interop.domino.dll.1.0.0.nupkg.sha512",
+    "C:\\Users\\Dumitru\\.nuget\\packages\\microsoft.aspnet.signalr.client\\2.4.0\\microsoft.aspnet.signalr.client.2.4.0.nupkg.sha512",
+    "C:\\Users\\Dumitru\\.nuget\\packages\\microsoft.exchange.webservices\\2.2.0\\microsoft.exchange.webservices.2.2.0.nupkg.sha512",
+    "C:\\Users\\Dumitru\\.nuget\\packages\\microsoft.rest.clientruntime\\2.3.20\\microsoft.rest.clientruntime.2.3.20.nupkg.sha512",
+    "C:\\Users\\Dumitru\\.nuget\\packages\\microsoft.visualstudio.ole.interop\\7.10.6071\\microsoft.visualstudio.ole.interop.7.10.6071.nupkg.sha512",
+    "C:\\Users\\Dumitru\\.nuget\\packages\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
+    "C:\\Users\\Dumitru\\.nuget\\packages\\npoi\\2.4.1\\npoi.2.4.1.nupkg.sha512",
+    "C:\\Users\\Dumitru\\.nuget\\packages\\sharpziplib\\1.0.0\\sharpziplib.1.0.0.nupkg.sha512",
+    "C:\\Users\\Dumitru\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512",
+    "C:\\Users\\Dumitru\\.nuget\\packages\\uipath\\19.10.7452.28108\\uipath.19.10.7452.28108.nupkg.sha512",
+    "C:\\Users\\Dumitru\\.nuget\\packages\\uipath.excel.activities\\2.7.2\\uipath.excel.activities.2.7.2.nupkg.sha512",
+    "C:\\Users\\Dumitru\\.nuget\\packages\\uipath.mail.activities\\1.7.2\\uipath.mail.activities.1.7.2.nupkg.sha512",
+    "C:\\Users\\Dumitru\\.nuget\\packages\\uipath.ocr.contracts\\2.2.1\\uipath.ocr.contracts.2.2.1.nupkg.sha512",
+    "C:\\Users\\Dumitru\\.nuget\\packages\\uipath.system.activities\\19.10.1\\uipath.system.activities.19.10.1.nupkg.sha512",
+    "C:\\Users\\Dumitru\\.nuget\\packages\\uipath.uiautomation.activities\\19.11.3\\uipath.uiautomation.activities.19.11.3.nupkg.sha512",
+    "C:\\Users\\Dumitru\\.nuget\\packages\\uipath.vision\\2.0.1\\uipath.vision.2.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

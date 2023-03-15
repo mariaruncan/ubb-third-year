@@ -1,0 +1,11 @@
+de rulat in ubuntu
+bison -d bison.y
+flex flex.lxi
+gcc bison.tab.c lex.yy.c
+./a.out in.txt
+cat out.asm
+
+de rulat in windows
+nasm -f win32 out.asm
+nlink out.obj -lio -o out.exe
+out.exe

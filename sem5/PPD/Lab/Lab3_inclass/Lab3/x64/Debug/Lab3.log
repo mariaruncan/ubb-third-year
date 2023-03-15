@@ -1,0 +1,5 @@
+﻿  Lab3.cpp
+D:\University\Semestrul 5\PPD\Lab\Lab3\Lab3\Lab3.cpp(15,13): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
+D:\University\Semestrul 5\PPD\Lab\Lab3\Lab3\Lab3.cpp(80,6): warning C4101: 'intreg': unreferenced local variable
+D:\University\Semestrul 5\PPD\Lab\Lab3\Lab3\Lab3.cpp(80,14): warning C4101: 'rest': unreferenced local variable
+  Lab3.vcxproj -> D:\University\Semestrul 5\PPD\Lab\Lab3\x64\Debug\Lab3.exe

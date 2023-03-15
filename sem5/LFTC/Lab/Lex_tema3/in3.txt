@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+
+int main () {
+	float radius, abdefghijklmn, per, pi;
+	pi = 3.14;
+	cin >> radius;
+	per = 2 * pi * radius;
+	123area = pi * radius * radius;
+	cout << per;
+	cout << 123area;
+}

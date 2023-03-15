@@ -1,0 +1,27 @@
+LFTC – lab1
+
+-	documentatie la fiecare functie(JavaDocs)
+-	alegem un limbaj de programare si il descriem(BNF, EBNF)
+
+Exemplu
+
+MLP -> C++
+
+<program> -> <lista_importuri> using namespace std; int main() {<lista_instructiuni> return 0;}
+<lista_importuri> -> <import> | <import><lista_importuri>
+<import> -> #include<iostream>
+<lista_instructiuni> -> <instructiune> | <instructiune><lista_instructiuni>
+<instructiune> -> <declaratie> | <atribuire> | <citire>...
+<declaratie> -> <tip> <id>;
+<tip> -> int | float | double | ...
+<id> -> <caracter> | <caracter><id>
+<caracter> -> a|b|c|...|z
+
+-	Elemente lexicale = atomi lexicali
+o	Identificatori
+o	Constante
+o	Cuvinte cheie
+o	Operatori
+o	Separatori
+
+aba

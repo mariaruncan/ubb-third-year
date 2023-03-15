@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Bloom</string>
+    <string name="home_title">Parking Monitoring System</string>
+    <string name="home_retry">Retry</string>
+    <string name="take_string">Take</string>
+    <string name="release_string">Release</string>
+</resources>

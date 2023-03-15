@@ -1,0 +1,6 @@
+In grila mea de moodle cam tot ce a picat e de aici, sau super asemanator
+Nu te baza pe raspunsurile puse in cele primite, multe sunt gresite
+Habar nu am ce e fisier final PPD si Dino??
+
+Ca referinte pentru scris, e destul de ok ce se gaseste aici
+De exemplu, eu am avut variabila conditionala, explicatii, mod de functionare si exemplu concret de folosire(lab 4/5 syncronized queue)
