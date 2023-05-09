@@ -20,8 +20,8 @@ if nargin < 4, has_plot = false; end
 
         if has_plot
             if length(L) == 2
-                plot(k, L(1), 'bo')
-                plot(k, L(2), 'r*')
+                plot(x(k), L(1), 'bo')
+                plot(x(k), L(2), 'r*')
             else
                 plot(k, L, 'bo')
             end
