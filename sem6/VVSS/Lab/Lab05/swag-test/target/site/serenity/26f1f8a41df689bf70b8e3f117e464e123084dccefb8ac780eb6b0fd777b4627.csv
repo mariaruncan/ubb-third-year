@@ -1,0 +1,4 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Flow story","Flow test","SUCCESS","2023-05-24T00:49:18.1224963+03:00[Europe/Bucharest]","0.0","8.22"
+"Login story","Login not valid test","SUCCESS","2023-05-24T00:49:20.0462753+03:00[Europe/Bucharest]","0.0","3.44"
+"Login story","Login valid test","SUCCESS","2023-05-24T00:49:23.6273456+03:00[Europe/Bucharest]","0.0","1.63"
